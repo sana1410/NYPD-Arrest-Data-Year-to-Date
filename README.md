@@ -24,7 +24,9 @@
 <li>SparkSql</li>
 </ul><ul>
 <li>Tableau</li>
-</ul><h5>Steps</h5><ul>
+</ul><h2>Screenshots</h2>
+<hr><p>![](Image/Dashboard 2.png)</p>
+</ul><h2>Steps</h2><ul>
 <li>1.DATA INGESTION-Ingesting Data from website to spark cluster using JSON API endpoint</li>
 </ul><ul>
 <li>2.DATA FILTERATION-Data is filtered from 2017 to 2022</li>
@@ -39,8 +41,16 @@ Brooklyn borough registers the highest number of crimes, followed by Manhattan.&
 <li>Males account for a higher number of registered crime cases compared to females.&nbsp;</li>
 <li>Dangerous Drug and Vehicle and Traffic Law offenses have shown significant decreases over the years.&nbsp;</li>
 <li>Conversely, Criminal Mischief &amp; Related Offenses have peaked in recent years.&nbsp;</li></p><h5>Code Examples</h5><ul>
-<li>The Dashboard can be found :-</li>
-</ul><p><code>&lt;div class='tableauPlaceholder' id='viz1714068711134' style='position: relative'&gt;&lt;noscript&gt;&lt;a href='#'&gt;&lt;img alt='Dashboard 2 ' src='https:&amp;#47;&amp;#47;public.tableau.com&amp;#47;static&amp;#47;images&amp;#47;cr&amp;#47;crimedashboard_17140209658330&amp;#47;Dashboard2&amp;#47;1_rss.png' style='border: none' /&gt;&lt;/a&gt;&lt;/noscript&gt;&lt;object class='tableauViz'  style='display:none;'&gt;&lt;param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /&gt; &lt;param name='embed_code_version' value='3' /&gt; &lt;param name='site_root' value='' /&gt;&lt;param name='name' value='crimedashboard_17140209658330&amp;#47;Dashboard2' /&gt;&lt;param name='tabs' value='no' /&gt;&lt;param name='toolbar' value='yes' /&gt;&lt;param name='static_image' value='https:&amp;#47;&amp;#47;public.tableau.com&amp;#47;static&amp;#47;images&amp;#47;cr&amp;#47;crimedashboard_17140209658330&amp;#47;Dashboard2&amp;#47;1.png' /&gt; &lt;param name='animate_transition' value='yes' /&gt;&lt;param name='display_static_image' value='yes' /&gt;&lt;param name='display_spinner' value='yes' /&gt;&lt;param name='display_overlay' value='yes' /&gt;&lt;param name='display_count' value='yes' /&gt;&lt;param name='language' value='en-US' /&gt;&lt;/object&gt;&lt;/div&gt;                &lt;script type='text/javascript'&gt;                    var divElement = document.getElementById('viz1714068711134');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth &gt; 800 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else if ( divElement.offsetWidth &gt; 500 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='2627px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                &lt;/script&gt;</code></p><h2>References</h2>
+<li>Checking the number of Observation in the table</li>
+</ul><p><code>%sql select count(*) FROM `nypd_historical_data2`;</code></p><ul>
+<li>Checking Unique offense values for treatment</li>
+</ul><p><code>%sql select distinct ofns_desc  FROM `nypd_historical_data2`; </code></p><ul>
+<li>Checking the trend of Crime over years</li>
+</ul><p><code>%sql SELECT EXTRACT(YEAR FROM ARREST_DATE) AS arrest_year, COUNT(*) AS num_arrests FROM nypd_historical_data2 GROUP BY arrest_year ORDER BY arrest_year;</code></p><ul>
+<li>Checking the trend of Crime over years and months</li>
+</ul><p><code>%sql SELECT      EXTRACT(YEAR FROM ARREST_DATE) AS arrest_year,     EXTRACT(MONTH FROM ARREST_DATE) AS arrest_month,     COUNT(*) AS num_arrests FROM      nypd_historical_data2 WHERE     EXTRACT(YEAR FROM ARREST_DATE) BETWEEN 2017 AND 2022 GROUP BY     arrest_year,     arrest_month ORDER BY     arrest_year,     arrest_month;</code></p><ul>
+<li>Checking the Distribution  of Crimes in Borough</li>
+</ul><p><code>%sql SELECT      CASE          WHEN ARREST_BORO = 'K' THEN 'Brooklyn'         WHEN ARREST_BORO = 'Q' THEN 'Queens'         WHEN ARREST_BORO = 'B' THEN 'Bronx'         WHEN ARREST_BORO = 'M' THEN 'Manhattan'         WHEN ARREST_BORO = 'S' THEN 'Staten Island'         ELSE ARREST_BORO -- If none of the above conditions match, keep the original value     END AS Borough,     COUNT(*) AS num_arrests FROM nypd_historical_data2 GROUP BY ARREST_BORO ORDER BY num_arrests DESC ;</code></p></p><h2>References</h2>
 <hr><ul>
 <li>Tutorial: Query data with notebooks. (n.d.). Docs.databricks.com. Retrieved February 12, 2024, from https://docs.databricks.com/en/getting-started/quick-start.html</li>
 </ul><ul>
