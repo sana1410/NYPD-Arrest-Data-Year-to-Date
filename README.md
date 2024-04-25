@@ -1,8 +1,9 @@
-<h1>NYPD Arrests: An Exploratory Data Analysis (2017-2022)</h1>
+\<h1>NYPD Arrests: An Exploratory Data Analysis (2017-2022)</h1>
 <hr><p>The aim of this project is to utilize Big Data tools, such as SparkSQL, within the Databricks Intelligence platform, to conduct data analysis on the NYPD arrest dataset.</p><h2>General Information</h2>
 <hr><ul>
 <li>Data for this presentation is sourced from the NYPD Arrests Data (Historic) provided by the Police Department (NYPD) and hosted by NYC OpenData at</li>
-[link](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
+</ul>
+<p>https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data.</p><ul>
 <li>We are going to derive insights on below scenarios: -</li>
 </ul>
 <ol>
@@ -24,7 +25,7 @@
 </ul><ul>
 <li>Tableau</li>
 </ul><h2>Screenshots</h2>
-![Image](Image/Dashboard 2.png)<h2>Steps</h2><ul>
+<hr><p>![](Image/Dashboard 2.png "")</p><h5>Steps</h5><ul>
 <li>1.DATA INGESTION-Ingesting Data from website to spark cluster using JSON API endpoint</li>
 </ul><ul>
 <li>2.DATA FILTERATION-Data is filtered from 2017 to 2022</li>
@@ -48,7 +49,7 @@ Conversely, Criminal Mischief &amp; Related Offenses have peaked in recent years
 <li>Checking the trend of Crime over years and months</li>
 </ul><p><code>%sql SELECT      EXTRACT(YEAR FROM ARREST_DATE) AS arrest_year,     EXTRACT(MONTH FROM ARREST_DATE) AS arrest_month,     COUNT(*) AS num_arrests FROM      nypd_historical_data2 WHERE     EXTRACT(YEAR FROM ARREST_DATE) BETWEEN 2017 AND 2022 GROUP BY     arrest_year,     arrest_month ORDER BY     arrest_year,     arrest_month;</code></p><ul>
 <li>Checking the Distribution  of Crimes in Borough</li>
-</ul><p><code>%sql SELECT      CASE          WHEN ARREST_BORO = 'K' THEN 'Brooklyn'         WHEN ARREST_BORO = 'Q' THEN 'Queens'         WHEN ARREST_BORO = 'B' THEN 'Bronx'         WHEN ARREST_BORO = 'M' THEN 'Manhattan'         WHEN ARREST_BORO = 'S' THEN 'Staten Island'         ELSE ARREST_BORO -- If none of the above conditions match, keep the original value     END AS Borough,     COUNT(*) AS num_arrests FROM nypd_historical_data2 GROUP BY ARREST_BORO ORDER BY num_arrests DESC ;</code></p><h2>References</h2>
+</ul><p><code>%sql SELECT      CASE          WHEN ARREST_BORO = 'K' THEN 'Brooklyn'         WHEN ARREST_BORO = 'Q' THEN 'Queens'         WHEN ARREST_BORO = 'B' THEN 'Bronx'         WHEN ARREST_BORO = 'M' THEN 'Manhattan'         WHEN ARREST_BORO = 'S' THEN 'Staten Island'         ELSE ARREST_BORO -- If none of the above conditions match, keep the original value     END AS Borough,     COUNT(*) AS num_arrests FROM nypd_historical_data2 GROUP BY ARREST_BORO ORDER BY num_arrests DESC ;</code></p><h2>Acknowledgement</h2>
 <hr><ul>
 <li>Tutorial: Query data with notebooks. (n.d.). Docs.databricks.com. Retrieved February 12, 2024, from https://docs.databricks.com/en/getting-started/quick-start.html</li>
 </ul><ul>
