@@ -25,8 +25,7 @@
 </ul><ul>
 <li>Tableau</li>
 </ul><h2>Screenshots</h2>
-<hr><p>![](Image/Dashboard 2.png)</p>
-</ul><h2>Steps</h2><ul>
+<hr><p>![](Image/Dashboard 2.png "")</p><h5>Steps</h5><ul>
 <li>1.DATA INGESTION-Ingesting Data from website to spark cluster using JSON API endpoint</li>
 </ul><ul>
 <li>2.DATA FILTERATION-Data is filtered from 2017 to 2022</li>
@@ -35,12 +34,12 @@
 </ul><ul>
 <li>4.DATA VISUALIZATION-Create visuals from the results obtained from each query in Databricks Notebook</li>
 </ul><h2>Usage</h2>
-<hr><p><li>A decreasing trend in the crime rate is observed from 2017 to 2020, followed by an increasing trend thereafter.&nbsp;</li><li>
-Brooklyn borough registers the highest number of crimes, followed by Manhattan.&nbsp;</li>
-<li>More than 50% of crimes are committed by individuals aged 25-44.&nbsp;</li>
-<li>Males account for a higher number of registered crime cases compared to females.&nbsp;</li>
-<li>Dangerous Drug and Vehicle and Traffic Law offenses have shown significant decreases over the years.&nbsp;</li>
-<li>Conversely, Criminal Mischief &amp; Related Offenses have peaked in recent years.&nbsp;</li></p><h5>Code Examples</h5><ul>
+<hr><p>A decreasing trend in the crime rate is observed from 2017 to 2020, followed by an increasing trend thereafter.&nbsp;
+Brooklyn borough registers the highest number of crimes, followed by Manhattan.&nbsp;
+More than 50% of crimes are committed by individuals aged 25-44.&nbsp;
+Males account for a higher number of registered crime cases compared to females.&nbsp;
+Dangerous Drug and Vehicle and Traffic Law offenses have shown significant decreases over the years.&nbsp;
+Conversely, Criminal Mischief &amp; Related Offenses have peaked in recent years.&nbsp;</p><h5>Code Examples</h5><ul>
 <li>Checking the number of Observation in the table</li>
 </ul><p><code>%sql select count(*) FROM `nypd_historical_data2`;</code></p><ul>
 <li>Checking Unique offense values for treatment</li>
@@ -50,9 +49,9 @@ Brooklyn borough registers the highest number of crimes, followed by Manhattan.&
 <li>Checking the trend of Crime over years and months</li>
 </ul><p><code>%sql SELECT      EXTRACT(YEAR FROM ARREST_DATE) AS arrest_year,     EXTRACT(MONTH FROM ARREST_DATE) AS arrest_month,     COUNT(*) AS num_arrests FROM      nypd_historical_data2 WHERE     EXTRACT(YEAR FROM ARREST_DATE) BETWEEN 2017 AND 2022 GROUP BY     arrest_year,     arrest_month ORDER BY     arrest_year,     arrest_month;</code></p><ul>
 <li>Checking the Distribution  of Crimes in Borough</li>
-</ul><p><code>%sql SELECT      CASE          WHEN ARREST_BORO = 'K' THEN 'Brooklyn'         WHEN ARREST_BORO = 'Q' THEN 'Queens'         WHEN ARREST_BORO = 'B' THEN 'Bronx'         WHEN ARREST_BORO = 'M' THEN 'Manhattan'         WHEN ARREST_BORO = 'S' THEN 'Staten Island'         ELSE ARREST_BORO -- If none of the above conditions match, keep the original value     END AS Borough,     COUNT(*) AS num_arrests FROM nypd_historical_data2 GROUP BY ARREST_BORO ORDER BY num_arrests DESC ;</code></p></p><h2>References</h2>
+</ul><p><code>%sql SELECT      CASE          WHEN ARREST_BORO = 'K' THEN 'Brooklyn'         WHEN ARREST_BORO = 'Q' THEN 'Queens'         WHEN ARREST_BORO = 'B' THEN 'Bronx'         WHEN ARREST_BORO = 'M' THEN 'Manhattan'         WHEN ARREST_BORO = 'S' THEN 'Staten Island'         ELSE ARREST_BORO -- If none of the above conditions match, keep the original value     END AS Borough,     COUNT(*) AS num_arrests FROM nypd_historical_data2 GROUP BY ARREST_BORO ORDER BY num_arrests DESC ;</code></p><h2>Acknowledgement</h2>
 <hr><ul>
 <li>Tutorial: Query data with notebooks. (n.d.). Docs.databricks.com. Retrieved February 12, 2024, from https://docs.databricks.com/en/getting-started/quick-start.html</li>
 </ul><ul>
-<li>•	Ojas, B. (2023, March 14). Data Ingestion in Apache Spark. Medium. https://medium.com/@badwaik.ojas/data-ingestion-in-apache-spark-7041ab46d8f3</li>
+<li>Ojas, B. (2023, March 14). Data Ingestion in Apache Spark. Medium. https://medium.com/@badwaik.ojas/data-ingestion-in-apache-spark-7041ab46d8f3</li>
 </ul>
