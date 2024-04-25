@@ -2,8 +2,7 @@
 <hr><p>The aim of this project is to utilize Big Data tools, such as SparkSQL, within the Databricks Intelligence platform, to conduct data analysis on the NYPD arrest dataset.</p><h2>General Information</h2>
 <hr><ul>
 <li>Data for this presentation is sourced from the NYPD Arrests Data (Historic) provided by the Police Department (NYPD) and hosted by NYC OpenData at</li>
-</ul>
-<p>https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data.</p><ul>
+[link](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
 <li>We are going to derive insights on below scenarios: -</li>
 </ul>
 <ol>
@@ -25,7 +24,7 @@
 </ul><ul>
 <li>Tableau</li>
 </ul><h2>Screenshots</h2>
-<hr><p>![](Image/Dashboard 2.png "")</p><h2>Steps</h2><ul>
+![Image](Image/Dashboard 2.png)<h2>Steps</h2><ul>
 <li>1.DATA INGESTION-Ingesting Data from website to spark cluster using JSON API endpoint</li>
 </ul><ul>
 <li>2.DATA FILTERATION-Data is filtered from 2017 to 2022</li>
