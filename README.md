@@ -56,7 +56,7 @@ Conversely, Criminal Mischief &amp; Related Offenses have peaked in recent years
 </ul><ul>
 <li>Ojas, B. (2023, March 14). Data Ingestion in Apache Spark. Medium. https://medium.com/@badwaik.ojas/data-ingestion-in-apache-spark-7041ab46d8f3</li>
 </ul>
-</p><h2>Dashboard Link</h2>
+<h2>Dashboard Link</h2>
 [Find here](https://public.tableau.com/views/crimedashboard_17140209658330/Dashboard2?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
 
 
