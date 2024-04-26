@@ -25,7 +25,7 @@
 </ul><ul>
 <li>Tableau</li>
 </ul><h2>Screenshots</h2>
-![](https://github.com/sana1410/NYPD-Arrest-Data-Year-to-Date/blob/e352ec6dcfacf3ff4efb75256fb5e60c98b8a97f/Image/Dashboard%202.jpg)
+![Dashboard](https://github.com/sana1410/NYPD-Arrest-Data-Year-to-Date/blob/e352ec6dcfacf3ff4efb75256fb5e60c98b8a97f/Image/Dashboard%202.jpg)
 <h2>Steps</h2><ul>
 <li>1.DATA INGESTION-Ingesting Data from website to spark cluster using JSON API endpoint</li>
 </ul><ul>
