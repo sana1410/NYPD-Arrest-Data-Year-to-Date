@@ -3,7 +3,7 @@
 <hr><ul>
 <li>Data for this presentation is sourced from the NYPD Arrests Data (Historic) provided by the Police Department (NYPD) and hosted by NYC OpenData at</li>
 </ul>
-<p>https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data.</p><ul>
+[Link](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
 <li>We are going to derive insights on below scenarios: -</li>
 </ul>
 <ol>
@@ -25,7 +25,9 @@
 </ul><ul>
 <li>Tableau</li>
 </ul><h2>Screenshots</h2>
+
 <img src="https://github.com/sana1410/NYPD-Arrest-Data-Year-to-Date/blob/e352ec6dcfacf3ff4efb75256fb5e60c98b8a97f/Image/Dashboard%202.jpg" alt="Crime Dashboard" width="1100" height="600">
+
 <h2>Steps</h2><ul>
 <li>1.DATA INGESTION-Ingesting Data from website to spark cluster using JSON API endpoint</li>
 </ul><ul>
