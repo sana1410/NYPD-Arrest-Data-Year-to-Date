@@ -1,12 +1,11 @@
 <h1>NYPD Arrests: An Exploratory Data Analysis (2017-2022)</h1>
 <hr><p>The aim of this project is to utilize Big Data tools, such as SparkSQL, within the Databricks Intelligence platform, to conduct data analysis on the NYPD arrest dataset.</p><h2>General Information</h2>
 <hr><ul>
-<li>Data for this presentation is sourced from the NYPD Arrests Data (Historic) provided by the Police Department (NYPD) and hosted by NYC OpenData at</li>
-</ul>
-[Link](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
-<li>We are going to derive insights on below scenarios: -</li>
-</ul>
+<li>Data for this presentation is sourced from the NYPD Arrests Data (Historic) provided by the Police Department (NYPD) and hosted by NYC OpenData at
+[Link](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)</li></ul>
+<ul><li>We are going to derive insights on below scenarios:</li></ul>
 <ol>
+
 <li>Number of Arrests made per year and month in NYC.</li>
 <li>Which Borough is most dangerous to live in NYC.</li>
 <li>Which Community is committing most crimes in New York.</li>
