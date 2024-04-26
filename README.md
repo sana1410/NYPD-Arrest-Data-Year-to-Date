@@ -25,7 +25,8 @@
 </ul><ul>
 <li>Tableau</li>
 </ul><h2>Screenshots</h2>
-<hr><p>![](Image/Dashboard 2.png "")</p><h5>Steps</h5><ul>
+![](Image/Dashboard 2.png)
+<h2>Steps</h2><ul>
 <li>1.DATA INGESTION-Ingesting Data from website to spark cluster using JSON API endpoint</li>
 </ul><ul>
 <li>2.DATA FILTERATION-Data is filtered from 2017 to 2022</li>
