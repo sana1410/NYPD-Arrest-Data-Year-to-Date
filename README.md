@@ -25,7 +25,7 @@
 </ul><ul>
 <li>Tableau</li>
 </ul><h2>Screenshots</h2>
-![Dashboard](https://github.com/sana1410/NYPD-Arrest-Data-Year-to-Date/blob/main/Image/Crime%20Dashboard.png)
+<iframe width="900" height="1200" src="https://public.tableau.com/views/crimedashboard_17140209658330/Dashboard2?:embed=yes&:display_count=yes"></iframe>
 <h2>Steps</h2><ul>
 <li>1.DATA INGESTION-Ingesting Data from website to spark cluster using JSON API endpoint</li>
 </ul><ul>
